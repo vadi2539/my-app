@@ -1,0 +1,60 @@
+<div>
+    <form class="table-searching-form" [formGroup]="policycreateform">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Customer Name</mat-label>
+            <input matInput placeholder="Input" required type="text" maxlength="100" formControlName="customername">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Gmail</mat-label>
+            <input matInput placeholder="Input" required type="text" formControlName="gmail">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Moblie No</mat-label>
+            <input matInput placeholder="Input" required type="text" minlength="10" maxlength="10" formControlName="moblieno">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Input" required type="text"  minlength="10" maxlength="50" formControlName="address">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>PolicyFrom</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="picker1" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>PolicyTo</mat-label>
+            <input matInput [min]="maxDate" [matDatepicker]="picker2"
+                   formControlName="dateto">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+          
+
+        <mat-form-field appearance="outline">
+            <mat-label>Job</mat-label>
+            <mat-select formControlName="job">
+              <mat-option value="one">Engineer</mat-option>
+              <mat-option value="two">Doctor </mat-option>
+              <mat-option value="three">Teacher</mat-option>
+              <mat-option value="four">Driver</mat-option>
+              <mat-option value="five">Farmer</mat-option>             
+            </mat-select>
+          </mat-form-field>
+
+          
+
+        
+        
+
+
+
+    </form>
+
+</div>

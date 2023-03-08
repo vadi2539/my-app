@@ -1,0 +1,134 @@
+<div class="login-background-image">
+    <div class="login-top-nic-logo">
+      <div class="bordertest"></div>
+      <div class="inner-header-logo">
+    <img src="./assets/images/3i-logo-login1.png" class="ggi-logo" width="100px">
+  
+    <div class="right-header-menu">
+     <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img class="slideInDown animated" src="./assets/images/wel-user.png" class="wel-user-icon" width="30px"><span>{{this.name}}</span>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  
+  <a (click)="openchangepassDialog()"><img src="./assets/images/changepassword.png" width="24px"> Change Password</a>
+  <a href="#/home"><img src="./assets/images/logout.png" width="24px">Logout</a>
+  
+  </div>
+  </div>
+    </div> 
+     
+  <div class="desk-top-menu">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="acttive"><a href="#/admin-complaint-list">Admin Complaint List</a></li>
+          <li ><a href="#/complaint-alignment">Complaint Allocation</a></li>
+          <li ><a href="#/admin-allocation-list">Allocation List</a></li>
+                  
+                        </ul>
+                      </div>      
+        <div  class="menutab">  
+            <nav class="navbar navbar-default  dashboard-mobile-menu">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                 
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="acttive"><a href="#/admin-complaint-list">Admin Complaint List</a></li>
+                  <li ><a href="#/complaint-alignment">Complaint Allocation</a></li>
+                  <li ><a href="#/admin-allocation-list">Allocation List</a></li>
+                  
+                </ul>
+                </div>
+                
+              </div>
+              </nav>
+    </div>
+  </div>
+  </div>
+     
+  </div> 
+<div class="container clspagecontent"> 
+<div class="page-listing-title">
+  <img src="./assets/images/quote-listing.jpg">  
+</div>
+<div class="inner-page-section animated fadeInLeft delay-01s">
+  <div class="table-title-section blue-gradient">
+      <h1>Admin Complaint List</h1>
+</div>
+  <div class="table-seaching-filed">
+        <!-- Listing Table -->
+        <div class="table-div">
+         
+                <div class="top-table-title table-responsive data-table-section mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" class=" col-md-12">
+
+  
+   <!-- Position Column -->
+  <ng-container matColumnDef="no">
+    <th mat-header-cell *matHeaderCellDef> Complaint No </th>
+    <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="complaint">
+    <th mat-header-cell *matHeaderCellDef> Complaints </th>
+    <td mat-cell *matCellDef="let element"> {{element.complaint}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mobile">
+        <th mat-header-cell *matHeaderCellDef> Customer MobileNo </th>
+        <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+      </ng-container>
+      <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> Complaint Date</th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+      
+    
+  <!-- Weight Column -->
+  <ng-container matColumnDef="remarks">
+    <th mat-header-cell *matHeaderCellDef> Remarks </th>
+    <td mat-cell *matCellDef="let element"> {{element.remarks}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> Contact Address </th>
+    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+  </ng-container>
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Status</th>
+    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+  </ng-container>
+  
+   <ng-container matColumnDef="action" stickyEnd>
+             <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+     <a><mat-icon class="edit-icon" *ngIf="element.status != 'CLOSED'" (click)="edit(element)">edit</mat-icon></a>
+     <!-- <mat-icon class="close-icon" (click)="close(element)">close</mat-icon> -->
+     </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [length]="resultsLength" [pageSize]="5"></mat-paginator> 
+</div>
+  </div>
+  </div>
+  
+</div>
+</div>	  
+
+

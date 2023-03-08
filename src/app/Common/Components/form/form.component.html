@@ -1,0 +1,32 @@
+<div class="container mt-45">
+    <form [formGroup] ="formFiled"></form>
+    <div class="row">
+        <div class="col-md-5 m-auto">
+            <div class="card">
+                
+    
+                <div class="container mt-45">
+                    <div class="row">
+                        <div class="col-md-5 m-auto">
+                            <div class="card">
+                                <div class="card-header bg-secondary text-white text-center">
+                                    <h1>Task List </h1>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <form id="taskForm.hasError">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Enter a Number" class="form-control" id="task" formControlName="textForm" >
+                                            <mat-error *ngIf="formFiled.get('textForm').hasError('required')"></mat-error>
+                                        </div>
+                                        <div class="btn btn-primary btn-md">
+                                          <button (click)="submitBtn">Submit</button>
+                                        </div>
+                       
+
+                          
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

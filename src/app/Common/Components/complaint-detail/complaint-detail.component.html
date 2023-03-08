@@ -1,0 +1,115 @@
+<div class="login-background-image">
+  <div class="login-top-nic-logo">
+    <div class="bordertest"></div>
+    <div class="inner-header-logo">
+  <img src="./assets/images/3i-logo-login.png" class="ggi-logo" width="100px">
+
+  <div class="right-header-menu">
+   <div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<img class="slideInDown animated" src="./assets/images/wel-user.png" class="wel-user-icon" width="30px"><span>{{this.name}}</span>
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+<a (click)="openchangepassDialog()"><img src="./assets/images/changepassword.png" width="24px"> Change Password</a>
+<a href="#/home"><img src="./assets/images/logout.png" width="24px">Logout</a>
+
+</div>
+</div>
+  </div> 
+  <div class="desk-top-menu">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="acttive"><a href="#/complaint-detail">Complaint Detail</a></li>
+          <li ><a href="#/complaint-list">Complaint List</a></li>
+                            
+                        </ul>
+                      </div>
+         
+          <div  class="menutab">  
+            
+            
+                  <nav class="navbar navbar-default  dashboard-mobile-menu">
+                      <div class="container-fluid">
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                          </button>
+                         
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                          <ul class="nav navbar-nav navbar-right">
+            <li class="acttive"><a href="#/complaint-detail">Complaint Detail</a></li>
+            <li ><a href="#/complaint-list">Complaint List</a></li>
+                              
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </nav>
+  </div>
+</div> 
+</div>
+</div>
+<div class="container clspagecontent"> 
+<div class="page-listing-title">
+<img src="./assets/images/quote-listing.jpg">  
+</div>
+<div class="inner-page-section animated fadeInLeft delay-01s">
+<div class="table-title-section blue-gradient">
+<h1>Complaint Details</h1>
+</div>
+<div class="table-seaching-filed">
+<form class="table-seaching-form" [formGroup]="complaintForm" >
+    <div class="col-md-12">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput  placeholder="Input" required type="text" 
+             formControlName="name">
+             <mat-error  *ngIf="complaintForm.get('name').hasError('pattern') && complaintForm.get('name').dirty"> Accept Only characters</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="col-md-12">
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile No</mat-label>
+          <input matInput  placeholder="Input" required maxlength="10" type="text" 
+             formControlName="mobile">
+             <mat-error  *ngIf="complaintForm.get('mobile').hasError('pattern') && complaintForm.get('mobile').dirty"> Accept Only Numbers</mat-error>
+        </mat-form-field>
+    </div>
+  <div class="col-md-12">
+    <mat-form-field appearance="outline" style="width:355px">
+      <mat-label>List Of Complaints</mat-label>
+      <mat-select  formControlName="complaints" required  multiple >
+        <mat-option *ngFor="let complaint of complaints" [value]="complaint.value">
+          {{complaint.viewValue}}
+      </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div> 
+  <div class="col-md-12"> 
+    <mat-form-field appearance="outline">
+      <mat-label>Remarks</mat-label>
+      <textarea matInput formControlName="remarks" required></textarea>
+    </mat-form-field>
+  </div>
+  <div class="col-md-12">
+    <mat-form-field appearance="outline">
+      <mat-label>Contact Address</mat-label>
+      <textarea matInput formControlName="address" required></textarea>
+    </mat-form-field>
+  </div>
+  <div class="col-md-8" style="text-align: right;">
+    <a mat-raised-button class="com-detail-sub" (click)="submit()">Submit</a>
+  </div> 
+          </form>
+<div class="right-side-img">
+  <img src="./assets/images/complaint-details-img.jpg">
+</div>          
+</div>
+
+</div>
+</div>	  
+
+

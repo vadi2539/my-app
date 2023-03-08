@@ -1,0 +1,247 @@
+.premia_logo-top {
+    text-align: right;
+    padding: 10px;
+}
+.login-form mat-form-field {
+    width: 100%;
+}
+.btn-login {
+    text-align: left;
+}
+.login-form {
+    margin-top: 1em;
+    padding: 25px 15px;
+    width: 330px;
+    float: left;
+}
+.login-top-nic-logo img,.premia_logo-top img  {
+    padding: 7px !IMPORTANT;
+}
+
+.login-form .mat-form-field-appearance-legacy .mat-form-field-label {
+    top: 26px;
+}
+
+.forgotpassword-div {
+    margin-bottom: 1em;
+    border-top: 1px solid #fefefe;
+    padding: 0px 0px;
+    text-align: left;
+}
+
+.forgotpassword-div a {
+    color: #275caa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-form .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding-bottom: 0px !important;
+}
+.login-form .form-group{
+    margin-bottom: 0px !important;
+}
+
+.claimintimation {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 173px;
+    left:15px;
+    text-align: center;
+}
+
+.claimintimation::before{
+    content: ' ';
+    position: absolute;
+    width: 100px;
+    height: 0;
+    right: 0px;
+    top: 0px;
+    border-width: 0px 0px 100px 0px;
+    border-style: solid;
+    border-color: transparent transparent  rgba(50, 125, 193, 0.6588235294117647)  rgba(50, 125, 193, 0.6588235294117647);
+    transform: rotate(47deg);
+
+}
+
+.downloads {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 158px;
+    top: 176px;
+    text-align: center;
+}
+.downloads::before{
+content: ' ';
+position: absolute;
+width: 100px;
+height: 0;
+right: 0px;
+top: 0px;
+border-width: 0px 0px 100px 0px;
+border-style: solid;
+border-color: transparent transparent  rgba(50, 125, 193, 0.6588235294117647)  rgba(50, 125, 193, 0.6588235294117647);
+transform: rotate(47deg);
+}
+
+.productbrochus{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 88px;
+    top: 104px;
+    text-align: center;
+}
+
+.productbrochus::before{
+    content: ' ';
+    position: absolute;
+    width: 100px;
+    height: 0;
+    right: 0px;
+    top: 0px;
+    border-width: 0px 0px 100px 0px;
+    border-style: solid;
+    border-color: transparent transparent  rgba(103, 103, 103, 0.8)  rgba(103, 103, 103, 0.8);
+    transform: rotate(47deg);
+    }
+.contactus {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 85px;
+    top: 245px;
+    text-align: center;
+}
+
+.contactus::before{
+    content: ' ';
+    position: absolute;
+    width: 100px;
+    height: 0;
+    right: 0px;
+    top: 0px;
+    border-width: 0px 0px 100px 0px;
+    border-style: solid;
+    border-color: transparent transparent  rgba(103, 103, 103, 0.8)  rgba(103, 103, 103, 0.8);
+    transform: rotate(47deg);
+    }
+
+.claimintimation img {
+    transform: rotate(0deg);
+    padding: 18px;
+    width:70px;
+}
+
+.downloads img {
+    transform: rotate(0deg);
+    padding: 18px;
+    width:70px;
+}
+
+.productbrochus img {
+    transform: rotate(0deg);
+    padding: 18px;
+    width:70px;
+}
+
+.contactus img {
+    transform: rotate(0deg);
+    padding: 18px;
+    width:70px;
+}
+
+
+p.wel-come-text {
+    float: right;
+    width: 100%;
+    text-align: right;
+    margin: 0px !important;
+    font-size: 12px;
+    color: #398fdc;
+}
+.user-name-div {
+    float: right;
+    font-size: 14px;
+    line-height: 28px;
+    color: #660109;
+}
+
+.login-form .mat-form-field-wrapper {
+    padding: 0;
+}
+
+img.motor-img {
+    width: 65px;
+    border: 1px solid #3690dd;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px #275caa;
+    margin-right: 5em;
+}
+
+img.marine-cargo {
+    width: 65px;
+    border: 1px solid #3690dd;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px #275caa;
+}
+
+.phone-number-head {
+    float: left;
+    color: #fff;
+    margin-left: 0em;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+mat-icon.phone-icons {
+    font-size: 16px;
+}
+
+
+
+.inner-header-logo {
+    width: 96%;
+    background: #fff;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+}
+.top-header-menus {
+  float: right;
+  padding: 10px 0px;  
+}
+.top-header-menus a:nth-child(1) {
+    padding-right: 0 !important;
+}
+.right-header-menu {
+    float: right;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 14px;
+    vertical-align: .255em;
+    content: "";
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    border-left: 5px solid transparent;
+    color: #000;
+}
+
+button#dropdownMenuButton, button#dropdownMenuButton:hover {
+    background: none;
+    outline: none;
+}
+
+.dropdown-menu {
+    right: 0 !important;
+    left:inherit !important;
+}

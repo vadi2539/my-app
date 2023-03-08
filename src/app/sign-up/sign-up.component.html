@@ -1,0 +1,36 @@
+<div class="card">
+    <form [formGroup]="signupForm">
+
+        <div class="right-login-input fornt ">
+            <h5 class="welcome text" style="margin-top: 15px;"></h5>
+            <div class="form-group">
+                <mat-form-field appearance="outline" class="gmail-input">
+                  <mat-label>Gmail</mat-label>
+                  <input matInput autocomplete="off" placeholder="" required type="text" formControlName="gmail">
+                  <mat-error *ngIf="signupForm.get('gmail').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group" style="margin-top: -10px;">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput appAppPwd autocomplete="off" placeholder="" required type="{{passType}}" formControlName="password">
+                    <mat-icon (mousedown)="showPwd()" (mouseup)="showPwd()">visibility</mat-icon>
+                    <mat-error *ngIf="signupForm.get('password').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group captcha-input">
+                <mat-form-field appearance="outline" style="width:110px;float:right">
+                    <mat-label>Captcha</mat-label>
+                    <input matInput autocomplete="off" placeholder="" required type="text" formControlName="captcha">
+                    <mat-error *ngIf="signupForm.get('captcha').hasError('required')"></mat-error>
+                </mat-form-field>
+
+                <div class="captcha-div">
+                    <img (click)="reCaptcha()" class="login-refresh-buttons">
+                    <div class="captcha-text">{{this.captcha}}</div>
+                </div>
+            
+            </div>
+        </div>
+    </form>
+</div>

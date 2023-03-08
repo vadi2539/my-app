@@ -1,0 +1,63 @@
+<div class="card">
+    <form [formGroup]="webregisterform">
+        
+        <mat-form-field>
+            <mat-label>FirstName</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="text" formControlName="firstName">
+            <mat-error *ngIf="webregisterform.get('firstName').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>LastName</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="text" formControlName="lastName">
+            <mat-error *ngIf="webregisterform.get('lastName').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>moblieNo</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="text" minlength="10" maxlength="10" formControlName="moblieNo">
+            <mat-error *ngIf="webregisterform.get('moblieNo').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gmail</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="text" formControlName="gmail">
+            <mat-error *ngIf="webregisterform.get('gmail').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="{{passtype}}"  formControlName="password">
+            <mat-icon (mouseup)="showpassword" (mousedown)="showpassword">visibility</mat-icon>
+            <mat-error *ngIf="webregisterform.get('password').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ConfirmPassword</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="{{passtype}}" formControlName="confirmPassword">
+            <mat-icon (mouseup)="showpassword" (mousedown)="showpassword">visibility</mat-icon>
+            <mat-error *ngIf="webregisterform.get('confirmPassword').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>DateOfBirth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender"></mat-select>
+            <mat-option value="one">Male</mat-option>
+            <mat-option value="two">Female</mat-option>
+            <mat-option value="three">Other</mat-option>
+        </mat-form-field>
+
+        <div class="button-sub-clt" style="text-align:center;margin-bottom:10px">
+            <a mat-raised-button (click)="signup()">Signup</a>
+        </div>
+
+    </form>
+    
+</div>

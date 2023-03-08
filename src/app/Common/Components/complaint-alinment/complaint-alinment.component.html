@@ -1,0 +1,108 @@
+<div class="login-background-image">
+	<div class="login-top-nic-logo">
+	  <div class="bordertest"></div>
+	  <div class="inner-header-logo">
+	<img src="./assets/images/3i-logo-login.png" class="ggi-logo" width="100px">
+
+	<div class="right-header-menu">
+	 <div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<img class="slideInDown animated" src="./assets/images/wel-user.png" class="wel-user-icon" width="30px"><span>{{this.name}}</span>
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+<a (click)="openchangepassDialog()"><img src="./assets/images/changepassword.png" width="24px"> Change Password</a>
+<a href="#/home"><img src="./assets/images/logout.png" width="24px">Logout</a>
+
+</div>
+</div>
+	</div> 
+   
+<div class="desk-top-menu">
+    <ul class="nav navbar-nav navbar-right">
+        <li class="acttive"><a href="#/admin-complaint-list">Admin Complaint List</a></li>
+        <li ><a href="#/complaint-alignment">Complaint Allocation</a></li>
+				<li ><a href="#/admin-allocation-list">Allocation List</a></li>
+                
+                      </ul>
+                    </div>      
+			<div  class="menutab">  
+					<nav class="navbar navbar-default  dashboard-mobile-menu">
+						<div class="container-fluid">
+						  <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>                        
+							</button>
+						   
+						  </div>
+						  <div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="acttive"><a href="#/admin-complaint-list">Admin Complaint List</a></li>
+								<li ><a href="#/complaint-alignment">Complaint Allocation</a></li>
+								<li ><a href="#/admin-allocation-list">Allocation List</a></li>
+								
+							</ul>
+						  </div>
+						  
+						</div>
+					  </nav>
+	</div>
+</div>
+</div>
+   
+</div> 
+<div class="container clspagecontent"> 
+<div class="page-listing-title">
+  <img src="./assets/images/quote-listing.jpg">  
+</div>
+<div class="inner-page-section animated fadeInLeft delay-01s">
+  <div class="table-title-section blue-gradient">
+	  <h1>Complaint Allocation</h1>
+</div>
+  <div class="table-seaching-filed">
+		  <form [formGroup]="allocatorForm" class="table-seaching-form">
+<div class="col-md-12">
+			<label>Name</label>
+			<p>{{Name}}</p>
+	</div>
+	<div class="col-md-12">
+			<label>Mobile No</label>
+			<p>{{mobile}}</p>
+	</div>
+	<div class="col-md-12">
+		<label>List Of Complaints</label>
+		<p>{{list}}</p>
+	</div>	
+	<div class="col-md-12">
+			<label>Remarks</label>
+			<p>{{remarks}}</p>
+	</div>
+	<div class="col-md-12">
+			<label>Contact Address</label>
+			<p>{{address}}</p>
+	</div>	  
+	<div class="col-md-12">
+				<mat-form-field appearance="outline" style="width:225px;padding: 0">
+					<mat-label>Allocated To</mat-label>
+		<mat-select formControlName="allocator" required >
+		  <mat-option *ngFor="let allocator of allocators" [value]="allocator.key">{{allocator.value}}</mat-option>
+		</mat-select>
+	  </mat-form-field>
+	</div> 
+	
+	<div class="col-md-8" style="text-align: right;">
+		<a mat-raised-button class="com-detail-Back" (click)="goBackPage()" >Back</a>
+	  <a mat-raised-button class="com-detail-sub" (click)="Submit()" >Submit</a>
+	</div> 
+			</form>
+  <div class="right-side-img">
+	<img src="./assets/images/complaint-details-img.jpg">
+  </div>          
+  </div>
+  
+</div>
+</div>	  
+
+

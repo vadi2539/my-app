@@ -1,0 +1,25 @@
+<div class="loginform">
+    <form [formGroup]="websignupform">
+        <mat-form-field>
+            <mat-label>Login</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="text" formControlName="login">
+            <mat-error *ngIf="websignupform.get('login').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="{{passtype}}" formControlName="password">
+            <mat-icon (mouseup)="showpassword" (mousedown)="showpassword">visibility</mat-icon>
+            <mat-error *ngIf="websignupform.get('password').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <div class="button-sub-clt" style="text-align:center;margin-bottom:10px">
+            <a mat-raised-button (click)="Login()">login</a>
+        </div>
+
+        <div class="button-sub-clt" style="text-align:center;margin-bottom:15px">
+            <a mat-raised-button (click)="register()">Register</a>
+        </div>
+
+    </form>
+</div>

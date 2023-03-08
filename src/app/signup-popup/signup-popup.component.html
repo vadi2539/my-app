@@ -1,0 +1,79 @@
+<div mat-dialog-content class="popcontainer table-searching-filed popup-form-div">
+    <form class="table-searching-form" [formGroup]="registercreateform">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Input" required type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>LastName</mat-label>
+            <input matInput placeholder="Input" required type="text" formControlName="lastname">
+        </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>UserName</mat-label>
+        <input matInput placeholder="Input" required type="text"   formControlName="username">
+    </mat-form-field>
+    <span  class="text-muted" *ngIf="registercreateform.get('username').hasError('minlength') && registercreateform.get('username').dirty">Username must contain atleast 8 to 16 characters</span>
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Input" required type="password"   maxlength="10" formControlName="password">
+        <!-- <div class="password-strengthinfo">
+                <mat-password-strength #passwordComponent [hidden]="!isDisabled"
+                  (onStrengthChanged)="onStrengthChanged($event)" [password]="password.value">
+                </mat-password-strength>
+                <mat-password-strength-info [hidden]="!isDisabled"
+                  lowerCaseCriteriaMsg="contain atleast one Lowercase character"
+                  upperCaseCriteriaMsg="contain atleast one uppercase character"
+                  digitsCriteriaMsg="contain atleast one digit character"
+                  specialCharsCriteriaMsg="contain atleast one special character"
+                  minCharsCriteriaMsg="contain atleast 8 character" [passwordComponent]="passwordComponent">
+                </mat-password-strength-info>
+              </div>             -->
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>ConfirmPassword</mat-label>
+        <input matInput placeholder="Input" required type="password"   maxlength="10" formControlName="confirmpassword">
+        <!-- <div class="password-strengthinfo">
+                <mat-password-strength #passwordComponent [hidden]="!isDisabled"
+                  (onStrengthChanged)="onStrengthChanged($event)" [password]="password.value">
+                </mat-password-strength>
+                <mat-password-strength-info [hidden]="!isDisabled"
+                  lowerCaseCriteriaMsg="contain atleast one Lowercase character"
+                  upperCaseCriteriaMsg="contain atleast one uppercase character"
+                  digitsCriteriaMsg="contain atleast one digit character"
+                  specialCharsCriteriaMsg="contain atleast one special character"
+                  minCharsCriteriaMsg="contain atleast 8 character" [passwordComponent]="passwordComponent">
+                </mat-password-strength-info>
+              </div>             -->
+    </mat-form-field>
+    
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    
+                
+    
+
+    <mat-radio-group aria-label="Gender">
+        <mat-radio-button value="1">Male</mat-radio-button>
+        <mat-radio-button value="2">Female</mat-radio-button>
+        <mat-radio-button value="3">Other</mat-radio-button>
+      </mat-radio-group>
+
+
+
+    
+</form>
+    <div class="button-sub-clt" style="text-align:center;margin-bottom:10px">
+            <a mat-raised-button (click)="register()" class="com-detail-sub">Register</a>
+    </div>
+       
+    
+</div>

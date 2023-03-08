@@ -1,0 +1,67 @@
+<div class="card">
+    <form [formGroup]="serviceform">
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>FirstName</mat-label>
+            <input matInput autocapitalize="off" placeholder="Input" required type="text"  (change)="name()" formControlName="firstname">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>LastName</mat-label>
+            <input matInput autocomplete="off" placeholder="Input" (change)="lastname()" required type="text" formControlName="lastname">
+        </mat-form-field>
+
+        <mat-form-field appearanace="outline">
+            <mat-label>Gmail</mat-label>
+            <input matInput autocomplete="off" placeholder="Input" (change)="gmail()" formControlName="gmail">
+        </mat-form-field>
+
+        
+        <mat-form-field appearanace="outline">
+            <mat-label>Password</mat-label>
+            <input matInput autocomplete="off" required type="{{passtype}}" (change)="password()" formControlName="password">
+            <mat-icon (mouseup)="showpassword" (mousedown)="showpassword">visibility</mat-icon>
+        </mat-form-field>
+
+        
+        <mat-form-field appearanace="outline">
+            <mat-label>ConfirmPassword</mat-label>
+            <input matInput autocomplete="off" placeholder="Input" (change)="confirmpassword()" formControlName="confirmpassword">
+            <mat-icon (mouseup)="showpassword" (mousedown)="showpassword">visibility</mat-icon> 
+        </mat-form-field>
+
+
+        <mat-form-field appearanace="outline">
+            <mat-label>MoblieNo</mat-label>
+            <input matInput autocomplete="off" placeholder="Input" (change)="moblieno()" formControlName="moblieno">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput [max]="maxDate" [min]="mindate" [matDatepicker]="picker" formControlName="dateofbirth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+                <mat-option value="one">Male</mat-option>
+                <mat-option value="two">Female</mat-option>
+                <mat-option value="three">Other</mat-option>
+            </mat-select>
+        </mat-form-field> 
+
+        <div class="button-sub-clt" style="text-align:center;margin-bottom:10px">
+            <a mat-raised-button (click)="register()" >Register</a>
+        </div>
+    
+   
+    </form>
+
+
+   
+</div>

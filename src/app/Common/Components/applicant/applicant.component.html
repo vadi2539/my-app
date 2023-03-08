@@ -1,0 +1,80 @@
+<div class="card">
+<form [formGroup]="applicantForm">
+    <div class="search">
+        <input matInput autocomplete="off" placeholder="Search" required type="text">
+    </div>
+
+
+    <div class="formGroup">
+        <h4>Advance Search</h4>
+
+        <div class="right-login-input fornt ">
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Applicant Number</mat-label>
+                    <input matInput autocomplete="off" placeholder="" required type="text"
+                        formControlName="applicantNumber">
+                    <mat-error *ngIf="applicantForm.get('applicantNumber').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Applicant Name</mat-label>
+                    <input matInput autocomplete="off" placeholder="" required type="text"
+                        formControlName="applicantName">
+                    <mat-error *ngIf="applicantForm.get('applicantName').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Vertical</mat-label>
+                    <input matInput autocomplete="off" placeholder="" required type="text" formControlName="vertical">
+                    <mat-error *ngIf="applicantForm.get('vertical').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Status</mat-label>
+                    <input matInput autocomplete="off" placeholder="" required type="text" formControlName="status">
+                    <mat-error *ngIf="applicantForm.get('status').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <mat-label>Applicant Type</mat-label>
+                    <input matInput autocomplete="off" placeholder="" required type="text"
+                        formControlName="applicantType">
+                    <mat-error *ngIf="applicantForm.get('applicantType').hasError('required')"></mat-error>
+                </mat-form-field>
+            </div>
+           
+            <mat-form-field appearance="outline">
+                <mat-label>CreatedDate</mat-label>
+                <input matInput [max]="maxDate" [matDatepicker]="picker1" formControlName="createdDate">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>SubmittedDate</mat-label>
+                <input matInput [min]="maxDate" [matDatepicker]="picker2"
+                       formControlName="submittedDate">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+
+
+
+
+
+            <div style="text-align:center;margin-bottom:10px">
+                <a mat-raised-button class="btn-danger">Cancel</a>
+                <a mat-raised-button class="btn-sucess">Clear</a>
+                <a mat-raised-button class="btn-sucess">Search</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+</div>

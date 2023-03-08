@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: #fff; }
+
+.header {
+    float: left;
+    height: 80px;
+    width: 100px;
+}
+
+.navbar-fixed-top {
+    position: relative;
+    width: 100%;
+    float: left;
+    background: none;
+    border: none;
+}
+.navbar-brand {
+    float: left;
+    height: auto;
+    padding: 5px 15px;
+}
+.logo img{
+    width: 150px;
+    float: left;
+    margin-top: 10px;
+}
+mat-icon.call-icon {
+    float: left;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    margin-right: 10px;
+    color: #002856;
+}

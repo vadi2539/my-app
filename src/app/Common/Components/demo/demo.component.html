@@ -1,0 +1,14 @@
+<div class="democlass">
+    <form [formGroup]="demoForm">
+          <div class="form-Group">
+            <mat-form-field>
+                <mat-label>Enter A Number</mat-label>
+                <input matInput placeholder="off" required="Number" formControlName="number">
+                <mat-error *ngIf="democlass.get(number).hasError(required)"></mat-error>
+            </mat-form-field>
+          </div>
+          <div class="button">
+            <a mat-raised-button (click)="register()">Register</a>
+          </div>
+    </form>
+</div>

@@ -1,0 +1,70 @@
+
+<div>
+    <form [formGroup]="homeform">
+
+
+        <mat-form-field>
+            <mat-label>First name</mat-label>
+            <input matInput autocomplete="" placeholder="" required type="text" formControlName="firstName">
+            <mat-error *ngIf="homeform.get('firstName').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Last name</mat-label>
+            <input matInput autocomplete="" placeholder="" required type="text" formControlName="lastName">
+            <mat-error *ngIf="homeform.get('lastName').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gmail</mat-label>
+            <input matInput autocomplete="" placeholder="" required type="text" formControlName="gmail">
+            <mat-error *ngIf="homeform.get('gmail').hasError('required')"></mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput autocomplete="" placeholder="" required type="{{passType}}" minlength="4" maxlength="14" formControlName="password">
+            <mat-icon (mouseup)="showpassword" (mousedown)="showpassword">visibility</mat-icon>
+            <mat-error *ngIf="homeform.get('password').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Moblie No</mat-label>
+            <input matInput autocomplete="off" placeholder="" required type="text" minlength="10" maxlength="10" formControlName="moblie">
+            <mat-error *ngIf="homeform.get('moblie').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+                <mat-option value="1">Male</mat-option>
+                <mat-option value="2">Female</mat-option>
+                <mat-option value="3">Other</mat-option>
+            </mat-select>
+            <mat-error *ngIf="homeform.get('firstName').hasError('required')"></mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput [min]="mindate" [matDatepicker]="picker" formControlName="dateofbirth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-radio-group formControlName="option">
+            <mat-radio-button value="1">male</mat-radio-button>
+            <mat-radio-button value="2">female</mat-radio-button>
+          </mat-radio-group>
+
+          <div class="button-sub-clt" style="text-align:center;margin-bottom:10px">
+            <a mat-raised-button (click)="Login()">login</a>
+        </div>
+
+        <div class="button-sub-clt" style="text-align:center;margin-bottom:15px">
+            <a mat-raised-button (click)="register()">Register</a>
+        </div>
+
+    </form>
+</div>
